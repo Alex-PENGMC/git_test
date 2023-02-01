@@ -5,7 +5,9 @@ int main()
 {
 	int i = 0;
 
-	printf("%d", i);
+	printf("%d\n", i);
+
+	printf("111111\n");
 
 	return 0;
 }
