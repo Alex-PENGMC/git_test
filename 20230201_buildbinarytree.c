@@ -56,6 +56,7 @@ void preorder(pTree_t root_tree)
         preorder(root_tree->pright);
     }
 }
+
 void midorder(pTree_t root_tree)
 {
     if(root_tree)
@@ -65,6 +66,7 @@ void midorder(pTree_t root_tree)
         midorder(root_tree->pright);
     }
 }
+
 void latorder(pTree_t root_tree)
 {
     if(root_tree)
@@ -90,12 +92,12 @@ int main_20230201_buildbinarytree()
         build_binary_tree(&root_tree, &queue_head, &queue_tail, c);
     }
 
-    printf("\n******************\n");
     preorder(root_tree);
     printf("\n******************\n");
     midorder(root_tree);
     printf("\n******************\n");
     latorder(root_tree);
+    printf("\n******************\n");
 
     return 0;
 }
