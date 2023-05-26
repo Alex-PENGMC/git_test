@@ -17,6 +17,9 @@ typedef struct
 #define ERR_END_MONTH   0x12
 #define ERR_END_DATE    0x13
 
+#define ERROR           1
+#define OK              0
+
 int year_cur, month_cur, date_cur, month_date[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 int count[] = {0, 0, 0};
 
@@ -142,6 +145,7 @@ void exchange_year_month_date()
 
 int calcu_difference()
 {
+    int aaa = 0;
     /* 起始年到中止年前一年总天数 */ 
     for(year_cur = start_time.year; year_cur < end_time.year; year_cur++) 
     {
@@ -183,7 +187,7 @@ int main()
     if(ret != 0)
     {
         printf("ERR CODE:0x%02x\n", ret);
-        return 1;
+        return ERROR;
     }
 
     exchange_year_month_date();
@@ -192,5 +196,5 @@ int main()
 
     printf("DATE DIFFERENCE IS %d DAYS.\n", difference);
 
-    return 0;
+    return OK;
 }
