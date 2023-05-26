@@ -145,7 +145,6 @@ void exchange_year_month_date()
 
 int calcu_difference()
 {
-    int aaa = 0;
     /* 起始年到中止年前一年总天数 */ 
     for(year_cur = start_time.year; year_cur < end_time.year; year_cur++) 
     {
