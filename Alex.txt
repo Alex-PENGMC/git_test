@@ -1,0 +1,26 @@
+                                    FUllHAN/Application Engineer
+1. peripherals
+1.1 cache
+
+1.2 SPI
+
+2. pipeline & 3A
+2.1 RAW data //解决sensor自身硬件导致问题，如黑电平（Black Level Correction，BLC）、固定噪声（Fixed-Pattern Noise，FPN）、镜头阴影矫正（Lens Shield Correction，LSC）、镜头畸变矫正（Lens Distortion Correction，LDC）、坏点矫正（Defective Pixel Correction，DPC ）
+2.1.1 黑电平（Black Level Correction，BLC）
+2.1.2 固定噪声（Fixed-Pattern Noise，FPN）
+2.1.3 镜头阴影矫正（Lens Shield Correction，LSC）
+2.1.4 镜头畸变矫正（Lens Distortion Correction，LDC）
+2.1.5 坏点矫正（Defective Pixel Correction，DPC ）
+
+去马赛克Demosaic/CFA插值（Color Filter Array，CFA）
+
+2.2 RGB data //色度域降噪 CGAMMA
+RGB2YUV
+2.3 YUV data //亮度域降噪 YGAMMA、YIE、CIE
+3. sensor bright up and debug
+3.1 sensor bright up
+
+3.2 debug
+
+4. coding & Tuning
+                                    KAMI/Firmware Engineer
