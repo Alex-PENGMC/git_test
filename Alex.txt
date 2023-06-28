@@ -12,7 +12,20 @@ CPU需要访问变量A：cache中含有变量A，发生hit，此时A在I/O中发
                  cache中不含变量A，发生miss，需要从MEM中读取数据，MEM中没有就从I/O将数据读入MEM再传回给CPU；
 CPU需要写回变量A: cache中含有变量A，发生hit，写回I/O中，与CPU中的新数据不一致，解决措施：clean cache，CPU将数据写入cache中，由DMA将数据从cache搬运至I/O中；
                  cache中不含变量A，直接CPU写数据至cache，由DMA将数据搬运至I/O；
-1.2 SPI
+1.2 SPI时序
+
+1.3 I2C时序
+        I2C为两线串行，属于一个master，多个slave的总线结构，每个设备都有一个特定的device_id。I2C两线为双向，分别为串行时钟线scl，串行数据线sda，通信方式均是由master发起，slave响应。
+
+开始信号：sda电平由高变低，scl电平由高变低
+结束信号：sda电平有低变高，scl电平有低变高
+
+根据sensor的spec文档或者datasheet，查看I2C的读写逻辑，一般对于res：8，data：8来说
+读：
+写：
+对于res：16，data：8来说
+读：
+写：
 
 2. pipeline & 3A
 2.1 RAW data //解决sensor自身硬件导致问题，如黑电平（Black Level Correction，BLC）、固定噪声（Fixed-Pattern Noise，FPN）、镜头阴影矫正（Lens Shield Correction，LSC）、镜头畸变矫正（Lens Distortion Correction，LDC）、坏点矫正（Defective Pixel Correction，DPC ）
