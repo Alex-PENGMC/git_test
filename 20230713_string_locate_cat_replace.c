@@ -117,7 +117,7 @@ int main()
 	memset(xml_ori, 0, sizeof(xml_ori));
 
 	/*打开文件*/
-	FILE *fp = fopen("stream.xml", "r");
+	FILE *fp = fopen("20230713_stream.xml", "r");
 	if(NULL == fp)
 		printf("open file stream.xml: FAIL\n");
 	/*将字符读入line_buff中,再拼接到xml_ori数组内*/
@@ -143,10 +143,10 @@ int main()
 	/*从xml中获取指定参数,结果存入result*/
 	get_para_from_xml(xml_ori, result);
 
-
 	char xml_modify[4096];
 	memset(xml_modify, 0, sizeof(xml_modify));
 	/*从数组中修改指定参数，结果存入*/
 	modify_para_to_xml(xml_ori, xml_modify);
+	
 	return 0;
 }
