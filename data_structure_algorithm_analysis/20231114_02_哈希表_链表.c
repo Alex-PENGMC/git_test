@@ -1,4 +1,4 @@
-#include "pengmc.h"
+#include "../pengmc.h"
 
 typedef struct node 
 {
@@ -15,18 +15,27 @@ typedef struct
     node_t** items;
 } hashtable;
 
-unsigned int hash_function(int key, int size) 
+uint hash_function(int key, int size) 
 {
     return (unsigned)key % size;
 }
 
 node_t* create_node(int key, int value, int hash) 
 {
+    /*申请节点空间*/
     node_t* new_node = (node_t*) malloc(sizeof(node_t));
-    new_node->key = key;
-    new_node->value = value;
-    new_node->hash = hash;
-    new_node->next = NULL;
+    
+    if (!new_node)
+    {
+        MALLOC_ERROR_FILE_FUNC_LINE;
+        return ERROR;
+    }
+
+    /*节点填值*/
+    new_node->key    = key;
+    new_node->value  = value;
+    new_node->hash   = hash;
+    new_node->next   = NULL;
 
     return new_node;
 }
