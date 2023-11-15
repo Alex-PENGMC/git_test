@@ -5,8 +5,8 @@
 #include <time.h>
 #include <unistd.h>
 
-#define OK             0
-#define ERROR          -1
+#define OK             ( 0)
+#define ERROR          (-1)
 
 #define _DEBUG_ 
 #ifdef _DEBUG_
@@ -25,8 +25,7 @@
 
 typedef unsigned int   uint;
 typedef unsigned char  uchar;
-typedef unsigned float ufloat;
 
         
-        
 #define MALLOC_ERROR_FILE_FUNC_LINE   DBG_PRINTF("malloc error file:%s func:%s line:%d\n", __FILE__, __func__, __LINE__)
+
