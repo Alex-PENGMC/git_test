@@ -28,4 +28,5 @@ typedef unsigned char  uchar;
 
         
 #define MALLOC_ERROR_FILE_FUNC_LINE   DBG_PRINTF("malloc error file:%s func:%s line:%d\n", __FILE__, __func__, __LINE__)
+#define LINE_FEED   printf("\n")
 
