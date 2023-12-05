@@ -1,0 +1,29 @@
+{
+    "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
+    "GitLive.Issue tracker integration": "Disabled",
+    "editor.fontSize": 14,
+    "security.allowedUNCHosts": [
+        //"192.168.8.16",
+        //"192.168.3.136"
+    ],
+    "remote.SSH.remotePlatform": {
+        "192.168.8.16": "linux"
+    },
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "window.zoomLevel": 2,
+    "terminal.integrated.scrollback": 100000,
+    "editor.minimap.enabled": false,
+    //终端颜色配置
+    // "workbench.colorCustomizations" : 
+    // {
+    //     //可以将鼠标放到下面的色号上根据自己的偏好进行选择
+    //     "terminal.foreground" : "#37FF13",
+    //     "terminal.background" : "#2c2c2c"
+    // }
+}
+
