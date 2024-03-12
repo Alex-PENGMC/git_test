@@ -1,17 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 
-SRCS = main.c file1.c file2.c
-OBJS = $(SRCS:.c=.o)
+SRCDIRS = dir1 dir2 dir3
+LIBS = $(foreach dir,$(SRCDIRS),$(dir)/lib$(notdir $(dir)).a)
 EXEC = alex
 
 all: $(EXEC)
 
-$(EXEC): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
+$(EXEC): $(LIBS) main.o
+	$(CC) $(CFLAGS) -o $@ main.o $(LIBS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(LIBS): 
+	$(MAKE) -C $(@D)
 
 clean:
-	rm -f $(OBJS) $(EXEC)
+	rm -f $(EXEC) main.o
+	$(foreach dir,$(SRCDIRS),$(MAKE) -C $(dir) clean;)
