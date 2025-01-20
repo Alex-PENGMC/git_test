@@ -3,7 +3,8 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "type": "gdb",
+      // "type": "lldb",
       "request": "launch",
       "args": [],
       "cwd": "/Users/alexpengmc/Desktop/git_test",
