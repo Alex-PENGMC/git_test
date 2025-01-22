@@ -2,20 +2,55 @@
 2. 选择需要的编辑语言, 如cpp.json,python.json;
 3. 在打开的snippets文件中, 添加代码片段:
 这里给出c的demo:
-    {
-        "Print Hello World": {
-        "prefix": "AAA", // 快捷输入的关键词
-        "body": [
-            "#include <stdio.h>",
-            "#include \"../pengmc.h\"",
-            "",
-            "int main(void)",
-            "{",
-            "	${1:}",  // 光标位置 1",
-            "",
-            "    return 0;",
-            "}"
-        ],
-        "description": "Insert a basic Hello World program"
-        }
-    }
+{
+	"Code Template": {
+	  "prefix": "AAA", // 快捷输入的关键词
+	  "body": [
+		"#include <stdio.h>",
+		"#include \"../pengmc.h\"",
+		"",
+		"int main(void)",
+		"{",
+		"	${1:}",  // 光标位置 1",
+		"",
+		"    return 0;",
+		"}"
+	  ],
+	  "description": "代码格式模板"
+	},
+
+	"Function Comments": {
+		"prefix": "HHH", // 快捷输入的关键词
+		"body": [
+			"/**",
+			"* @name ${1:}",
+			"",
+			"* @brief ",
+			"",
+			"* @param ",
+			"",
+			"* @return ",
+			"*/"
+	
+		],
+		"description": "函数注释模板"
+		},
+	
+		"File Comments": {
+			"prefix": "FFF", // 快捷输入的关键词
+			"body": [
+				"/**",
+				"* File: ${1:} ",
+				"",
+				"* Description:  ",
+				"",
+				"* Author: Alex PENG ",
+				"",
+				"* Date: 2025-01-22 ",
+				"*/"
+			],
+			"description": "文件模板"
+			}
+	
+  }
+  

@@ -1,3 +1,6 @@
+#ifndef PENGMC_H
+#define PENGMC_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -38,3 +41,4 @@
     DBG_PRINTF("\n");\
 }
 
+#endif
