@@ -92,13 +92,37 @@ def plot_wave(xs, ys, sample_points=None):
     plt.ylabel("Amplitude")
     plt.show()
 
+def run_test_range():
+    bit_width_ns       = bit_width * tick_ns
+    offset_left_ns     = offset_left * tick_ns
+
+    # 生成参考波形和采样
+    xs_ref, ys_ref       = generate_wave_points_ns(sync_pulse, offset_left_ns, bit_number, bit_width_ns, offset_right)
+    ref_sample_xs_groups = get_all_sample_xs(sync_pulse, offset_left, bit_number, bit_width)
+    ref_sample_ys_groups = extract_y_samples(xs_ref, ys_ref, ref_sample_xs_groups)
+
+    print("测试结果（单位：ns）：")
+    print("offset_left_delta_ns, bit_width_delta_ns, match")
+
+    for offset_delta in range(-10, 11):
+        for width_delta in range(-10, 11):
+            offset_left_ns_new = offset_left_ns + offset_delta
+            bit_width_ns_new   = bit_width_ns + width_delta
+
+            xs_new, ys_new = generate_wave_points_ns(sync_pulse, offset_left_ns_new, bit_number, bit_width_ns_new, offset_right)
+            new_sample_ys_groups = extract_y_samples(xs_new, ys_new, ref_sample_xs_groups)
+
+            match = compare_with_reference(ref_sample_ys_groups, new_sample_ys_groups)
+            print(f"{offset_delta:>+3}, {width_delta:>+3}, {'✅' if match else '❌'}")
+
+
 # 主程序
 if __name__ == "__main__":
     # 初始值换算为 ns
     bit_width_ns       = bit_width * tick_ns
     offset_left_ns     = offset_left * tick_ns
     ns_variation       = 0  # 模拟脉宽变化，例如增宽3ns
-    offset_left_ns_new = offset_left_ns + 10 # 模拟offset_left发生变化，例如增大10ns
+    offset_left_ns_new = offset_left_ns - 0 # 模拟offset_left发生变化，例如增大10ns
     # 生成参考波形
     xs_ref, ys_ref       = generate_wave_points_ns(sync_pulse, offset_left_ns, bit_number, bit_width_ns, offset_right)
     ref_sample_xs_groups = get_all_sample_xs(sync_pulse, offset_left, bit_number, bit_width)
@@ -114,3 +138,5 @@ if __name__ == "__main__":
 
     # 绘图
     plot_wave(xs_new, ys_new, ref_sample_xs_groups)
+
+    # run_test_range()
