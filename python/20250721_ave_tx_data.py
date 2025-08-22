@@ -55,6 +55,6 @@ if __name__ == "__main__":
     main()
 
 
-# python reg_encoder.py --encode 0x1234ABCD
+# python 20250721_ave_tx_data.py --encode 0x1234ABCD
 # 1. 字节反转；2. bit翻转；
-# python reg_encoder.py --decode "b3 d5 2c 48"
+# python 20250721_ave_tx_data.py --decode "b3 d5 2c 48"

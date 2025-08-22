@@ -1,0 +1,26 @@
+# 工程文件哈希清单（模式：所有非隐藏文件（排除.log,.tmp,.swp，SHA256））
+# 工程目录：F:\ALEX_CODE\python
+# 综合哈希值：cfceb84bae1534cab69ad1c49567d8505c8eb0dc607052e9ce3e74ad5bac70cb
+# 生成时间：2025-08-22 11:36:25
+# 总文件数：18，变更文件数：18
+---
+文件路径                                               | 哈希值                                                             
+---------------------------------------------------------------------------------------------------------------------
+.\20250101_generate_size_content_hex.py           ... | 7e6a14281d7a672e938e079b37fc1bb0482b08007821b12cb1c7b4e873b15b6e
+.\20250110_ft4222_conntect.py                     ... | 00f06ba4b9fc661ac1afe082fd2c06c5cad0877690349879da64ef1de8ab65f1
+.\20250207_align_code.py                          ... | 54d4ee5443882aed9bd522c6cb7a668abad6ab05c30019b2fbc526b3efa02fe4
+.\20250212_bianli.py                              ... | f624f0d3b8119c40babf4936bdfa986c8e24ce66d08f84a91a24c3af7bc62e7b
+.\20250304_plotlib.py                             ... | 262dede3754bc76c17abfd4ec0009edd0f284522b15261f31170621175992ab9
+.\20250512_video_clipping.py                      ... | 261d234cf0313cd043e4e0395469f93de9833311d2dfb728a52222face96b2b1
+.\20250514_extract_raw_frames.py                  ... | af751f8590bd97cb39548a51dda74f4df68e9a9e8bf1e3da19d4ded08740ff4f
+.\20250519_rename_raw_file.py                     ... | 2b6cf5b0d46895962ecf4472203ea357d61eb94c7f096e274b61ebfbb21052f7
+.\20250527_ptz.py                                 ... | 2a3811efc8c88446f08ccaeaf573fc23b443132b3d13ece550992289748f20aa
+.\20250616_delete_name_1.py                       ... | 66b2de7460cd7d908463f90684f2946b6afdf7ef1fecf7fc69d356cfd655eb58
+.\20250715_2sheep1car.py                          ... | 6eb050e363dd4d4c7cd9104679af3cd611720f796812ea16ea7c794f66f38cae
+.\20250721_ave_tx_data.py                         ... | 8b45d45791aa1cb9cf4056cd827eca7b0f35685bfd5c2d0b6e3fe37710106051
+.\20250721_extract_clip_raw.py                    ... | 01f597fadd7e80933bc59dacc6fbe91c70c1e2b2cd0bdf403d3dc35a2c1f39e9
+.\20250721_parser_embRawVideo.py                  ... | cc5029094c493e2bf52a281aea563076e64ee264f6be6b9311d3b26b46e36b32
+.\20250808_extract_emb_fixed_pattern.py           ... | 20fe3a3f2a70515b0bb2b54ce13c514ee7f5c406d605730283b235800abf107a
+.\20250822_hash_calcuate.py                       ... | 6ce66d4a23cbbca5b8beb007a234077ba313efcc250e4a4b68e9f2e01178986c
+.\isp_pipeline.py                                 ... | 166b785de8a7554f2b08a2878f2dde4ffac187066b077e32278eb91aef328b1f
+.\sample.raw                                      ... | ba33f0119b8d61cedd20e2e117cb5c83ed5e42ac6302c826c904ce05564e5c32
